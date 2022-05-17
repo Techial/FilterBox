@@ -15,17 +15,17 @@
 
 <div align="center">
   <!-- It works, why? -->
-  <a href="https://nodejs.org/api/documentation.html#documentation_stability_index">
+  <a href="https://github.com/Techial/FilterBox">
     <img src="https://forthebadge.com/images/badges/it-works-why.svg"
       alt="It works, why?" />
   </a>
   <!-- C# -->
-  <a href="https://nodejs.org/api/documentation.html#documentation_stability_index">
+  <a href="https://docs.microsoft.com/en-us/dotnet/csharp/">
     <img src="https://forthebadge.com/images/badges/made-with-c-sharp.svg"
       alt="Made with C#" />
   </a>
   <!-- Gluten free -->
-  <a href="https://nodejs.org/api/documentation.html#documentation_stability_index">
+  <a href="https://github.com/Techial/FilterBox/releases/tag/stable">
     <img src="https://forthebadge.com/images/badges/gluten-free.svg"
       alt="Gluten free" />
   </a>
