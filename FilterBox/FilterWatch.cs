@@ -126,16 +126,17 @@ namespace FilterBox
             List<ScanResult> scanResults = SearchDirectory(Dropbox.getFolder());
             FilterWatch.FilterSearch(ref scanResults);
 
+            // Now ignore all files in filter
             foreach(ScanResult result in scanResults)
             {
                 foreach(string file in result.files)
                 {
-                    //Dropbox.Ignore(file);
+                    Dropbox.Ignore(file);
                 }
 
                 foreach (string folder in result.folders)
                 {
-                    //Dropbox.Ignore(folder);
+                    Dropbox.Ignore(folder);
                 }
             }
         }
