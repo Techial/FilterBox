@@ -20,6 +20,7 @@
 
 ## Table of Contents
 - [Features](#features)
+- [Screenshots](#screenshots)
 - [UI](#ui)
 - [Support](#support)
 
@@ -28,6 +29,13 @@
 - __event driven:__ does not use any background resources at all
 - __performance:__ only filters newly renamed or created files
 - __customizable:__ create your own filters inside the app
+
+## Screenshots
+### Main UI:
+![FilterBox UI](/Images/FilterBox.png)
+
+### System tray
+![System Tray Menu](/Images/SystemTray.png)
 
 ## UI
 I'll have to admit that UI really wasn't a priority on this project, but I'll gladly accept any help provided. There's really no limit to how far you can go. If you need help translating the app into a library for your own UI, I'll assist.
