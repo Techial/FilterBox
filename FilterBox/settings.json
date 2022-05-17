@@ -1,0 +1,5 @@
+{
+  "Filters": [
+    { "Name": "node_modules", "Type": "folder" }
+  ]
+}
