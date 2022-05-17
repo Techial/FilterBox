@@ -41,6 +41,7 @@
 
 ## Table of Contents
 - [Features](#features)
+- [Description](#description)
 - [Screenshots](#screenshots)
 - [UI](#ui)
 - [Support](#support)
@@ -50,6 +51,15 @@
 - __event driven:__ does not use any background resources at all
 - __performance:__ only filters newly renamed or created files
 - __customizable:__ create your own filters inside the app
+
+## Description
+Have you ever tried coding with Dropbox so you could sync progress and local commits between your computers?
+If yes, I'm certain you've Googled __"How to ignore folders Dropbox"__, and found that there's really no easy way out other than having to manually run a Powershell or Shell command every time you create a new app.
+
+This software aims to solve this, by always running in the background checking all file changes to see if they match your filters, and then automatically tells Dropbox to ignore uploading these files and/or folders.
+Not only does it save your limited Dropbox storage space for other important stuff, it reduces the amount of bandwith used while developing. I've seen 1GB+ ```node_modules``` folders. That's __50% of your free Dropbox storage__.
+
+[Download the app](https://github.com/Techial/FilterBox/releases/tag/stable) or check out the source code above, and reserve your cloud storage for the more important files.
 
 ## Screenshots
 ### Main UI:
