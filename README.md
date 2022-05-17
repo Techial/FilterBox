@@ -1,5 +1,8 @@
 
-<h1 align="center">FilterBox</h1>
+<div align="center">
+  <img src="Images/FilterBox.ico"/>
+  <h1>FilterBox</h1>
+</div>
 
 <div align="center">
   <strong>Save that precious space and bandwith</strong>
@@ -9,6 +12,24 @@
 </div>
 
 <br />
+
+<div align="center">
+  <!-- It works, why? -->
+  <a href="https://nodejs.org/api/documentation.html#documentation_stability_index">
+    <img src="https://forthebadge.com/images/badges/it-works-why.svg"
+      alt="It works, why?" />
+  </a>
+  <!-- C# -->
+  <a href="https://nodejs.org/api/documentation.html#documentation_stability_index">
+    <img src="https://forthebadge.com/images/badges/made-with-c-sharp.svg"
+      alt="Made with C#" />
+  </a>
+  <!-- Gluten free -->
+  <a href="https://nodejs.org/api/documentation.html#documentation_stability_index">
+    <img src="https://forthebadge.com/images/badges/gluten-free.svg"
+      alt="Gluten free" />
+  </a>
+</div>
 
 <div align="center">
   <sub>Built with ❤︎ by
