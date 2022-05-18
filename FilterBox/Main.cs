@@ -7,10 +7,17 @@ namespace FilterBox
     {
         public FilterWatch watcher;
         private FormWindowState SavedWindowState = FormWindowState.Normal;
+        private bool startHidden = false;
 
-        public Main()
+        public Main(string[] args)
         {
             InitializeComponent();
+
+            if (args.Length > 0)
+            {
+                if (args[0] == "--silent")
+                    startHidden = true;
+            }
 
             Dropbox.locateDropbox();
             string path = Dropbox.getFolder();
@@ -29,11 +36,7 @@ namespace FilterBox
             appIcon.Icon = appIco;
 
             // Add a menu for our appIcon
-            ContextMenuStrip contextMenuStrip = new ContextMenuStrip();
-            contextMenuStrip.Items.Add("Show", null, appIcon_onShowClick);
-            contextMenuStrip.Items.Add("Exit", null, appIcon_onExitClick);
-
-            appIcon.ContextMenuStrip = contextMenuStrip;
+            createNewContextMenu();
 
             // Initialize columnMapping for ListViewEx
             var columnMapping = new List<(string ColumnName, Func<Filter, object> ValueLookup, Func<Filter, string> DisplayStringLookup)>()
@@ -64,6 +67,23 @@ namespace FilterBox
 
             watcher = new FilterWatch();
             watcher.StartWatching(path);
+        }
+
+        private ContextMenuStrip contextMenuStrip;
+        private ToolStripMenuItem StartupLaunch;
+
+        private void createNewContextMenu()
+        {
+            contextMenuStrip = new ContextMenuStrip();
+
+            StartupLaunch = new ToolStripMenuItem("Launch on Startup", null, appIcon_onLOSClick);
+            StartupLaunch.Checked = Autostart.isAutostarting();
+
+            contextMenuStrip.Items.Add("Show", null, appIcon_onShowClick);
+            contextMenuStrip.Items.Add(StartupLaunch);
+            contextMenuStrip.Items.Add("Exit", null, appIcon_onExitClick);
+
+            appIcon.ContextMenuStrip = contextMenuStrip;
         }
 
         private void scanButton_Click(object sender, EventArgs e)
@@ -137,16 +157,37 @@ namespace FilterBox
 
         private void appIcon_onShowClick(object? sender, EventArgs e)
         {
-            if (this.Visible)
+            if (this.Visible && this.ShowInTaskbar)
                 return;
 
+            // Make sure all of the visible parameters are set to true
             this.Show();
-            WindowState = SavedWindowState;
+            this.Visible = true;
+            this.WindowState = SavedWindowState;
+            this.ShowInTaskbar = true;
+        }
+
+        private void appIcon_onLOSClick(object? sender, EventArgs e)
+        {
+            Autostart.toggleAutostart();
+            StartupLaunch.Checked = Autostart.isAutostarting();
         }
 
         private void appIcon_onExitClick(object? sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void onMainLoaded(object sender, EventArgs e)
+        {
+            if(startHidden)
+            {
+                startHidden = false;
+                this.WindowState = FormWindowState.Minimized;
+                SavedWindowState = FormWindowState.Normal;
+                this.ShowInTaskbar = false;
+                this.Visible = false;
+            }
         }
     }
 }

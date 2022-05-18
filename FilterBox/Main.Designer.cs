@@ -183,6 +183,7 @@ namespace FilterBox
             this.Controls.Add(this.scanButton);
             this.Name = "Main";
             this.Text = "FilterBox";
+            this.Load += new System.EventHandler(this.onMainLoaded);
             this.Resize += new System.EventHandler(this.MainResized);
             this.ResumeLayout(false);
             this.PerformLayout();
