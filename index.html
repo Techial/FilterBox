@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FilterBox</title>
+
+        <!-- Primary Meta Tags -->
+        <title>FilterBox - Save DropBox storage</title>
+        <meta name="title" content="FilterBox - Save DropBox storage">
+        <meta name="description" content="FilterBox automatically filters through your DropBox folder in realtime, and stops files/folders from being uploaded, using your own custom filters.">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://techial.github.io/FilterBox/">
+        <meta property="og:title" content="FilterBox - Save DropBox storage">
+        <meta property="og:description" content="FilterBox automatically filters through your DropBox folder in realtime, and stops files/folders from being uploaded, using your own custom filters.">
+        <meta property="og:image" content="https://techial.github.io/FilterBox/Images/FilterBox-Social.png">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://techial.github.io/FilterBox/">
+        <meta property="twitter:title" content="FilterBox - Save DropBox storage">
+        <meta property="twitter:description" content="FilterBox automatically filters through your DropBox folder in realtime, and stops files/folders from being uploaded, using your own custom filters.">
+        <meta property="twitter:image" content="https://techial.github.io/FilterBox/Images/FilterBox-Social.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div>
+                    <a href="https://github.com/Techial/FilterBox">
+                        <img src="Images/FilterBox.ico" alt="FilterBox Logo"/>
+                    </a>
+                    <h1>FilterBox</h1>
+                </div>
+
+                <div>
+                    <strong>Save that precious space and bandwith</strong>
+                </div>
+                <div>
+                    Automatically adds the <i>com.dropbox.ignored</i> xattr to filtered files & directories.
+                </div>
+
+                <br/>
+
+                <div>
+                    <!-- It works, why? -->
+                    <a href="https://github.com/Techial/FilterBox">
+                    <img src="https://forthebadge.com/images/badges/it-works-why.svg"
+                        alt="It works, why?" />
+                    </a>
+                    <!-- C# -->
+                    <a href="https://docs.microsoft.com/en-us/dotnet/csharp/">
+                    <img src="https://forthebadge.com/images/badges/made-with-c-sharp.svg"
+                        alt="Made with C#" />
+                    </a>
+                    <!-- Gluten free -->
+                    <a href="https://github.com/Techial/FilterBox/releases/latest">
+                    <img src="https://forthebadge.com/images/badges/gluten-free.svg"
+                        alt="Gluten free" />
+                    </a>
+                </div>
+
+                <div>
+                    <sub>Built with ❤︎ by
+                    <a href="https://github.com/Techial">Techial</a> and
+                    <a href="https://github.com/Techial/FilterBox/graphs/contributors">
+                      contributors
+                    </a>
+                </div>
+            </header>
+
+            <div id="table_of_contents" class="section">
+                <h2>Table of Contents</h2>
+                <ul>
+                    <li>
+                        <a href="https://github.com/Techial/FilterBox/releases/latest">Download</a>
+                    </li>
+                    <li>
+                        <a href="#features">Features</a>
+                    </li>
+                    <li>
+                        <a href="#description">Description</a>
+                    </li>
+                    <li>
+                        <a href="#screenshots">Screenshots</a>
+                    </li>
+                    <li>
+                        <a href="#ui">UI</a>
+                    </li>
+                    <li>
+                        <a href="#support">Support</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="features" class="section">
+                <h2>Table of Contents</h2>
+                <ul>
+                    <li>
+                        <p><strong>small size:</strong> app is intentionally built to run on already existing and popular runtimes to reduce footprint</p>
+                    </li>
+                    <li>
+                        <p><strong>event driven:</strong> does not use any background resources at all</p>
+                    </li>
+                    <li>
+                        <p><strong>performance:</strong> only filters newly renamed or created files</p>
+                    </li>
+                    <li>
+                        <p><strong>customizable:</strong> create your own filters inside the app</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="description" class="section">
+                <h2>Description</h2>
+                <p>
+                    Have you ever tried coding with Dropbox so you could sync progress and local commits between your computers?
+                    If yes, I'm certain you've Googled <strong>"How to ignore folders Dropbox"</strong>, 
+                    and found that there's really no easy way out other than having to manually run a Powershell or Shell command every time you create a new app.
+                </p>
+                <p>
+                    This software aims to solve this, by always running in the background checking all file changes to see if they match your filters, 
+                    and then automatically tells Dropbox to ignore uploading these files and/or folders.
+                    Not only does it save your limited Dropbox storage space for other important stuff, 
+                    it reduces the amount of bandwith used while developing. I've seen 1GB+ <code>node_modules</code> folders. That's <strong>50% of your free Dropbox storage</strong>.
+                </p>
+
+                <p>
+                    <a href="https://github.com/Techial/FilterBox/releases/latest">Download the app</a> or check out the <a href="https://github.com/Techial/FilterBox">source code</a>, and reserve your cloud storage for the more important files.
+                </p>
+            </div>
+
+            <div id="screenshots" class="section">
+                <h2>Screenshots</h2>
+                <div>
+                    <h3>Main UI</h3>
+                    <img src="/Images/FilterBox.png" alt="FilterBox UI"/>
+                </div>
+
+                <div>
+                    <h3>System tray</h3>
+                    <img src="/Images/SystemTray.png" alt="System Tray Menu"/>
+                </div>
+            </div>
+
+            <div id="ui" class="section">
+                <h2>UI</h2>
+                <p>
+                    I'll have to admit that UI really wasn't a priority on this project, but I'll gladly accept any help provided. 
+                    There's really no limit to how far you can go. If you need help translating the app into a library for your own UI, I'll assist.
+                </p>
+                <p>
+                    Open an <a href="https://github.com/Techial/FilterBox/issues/new">issue</a> and ping me <a href="https://github.com/Techial">@Techial</a> :)
+                </p>
+            </div>
+
+            <div id="support" class="section">
+                <h2>Support</h2>
+                <p>
+                    Open an issue if you feel like anything needs to be added. I'll gladly review pull requests and merge them if deemed to be useful!
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
