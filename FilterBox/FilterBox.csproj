@@ -22,7 +22,6 @@
 
   <ItemGroup>
     <PackageReference Include="Mono.Posix" Version="7.1.0-final.1.21458.1" />
-    <PackageReference Include="Vanara.PInvoke.Kernel32" Version="3.4.2" />
   </ItemGroup>
 
   <ItemGroup>

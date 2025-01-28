@@ -58,7 +58,7 @@
 
 ### Pre-requisites
 
-- Ensure you have the .NET 8.0 runtime installed on your machine. You can download it from [here](https://dotnet.microsoft.com/download/dotnet/8.0).
+- Ensure you have the .NET Desktop Runtime 8.0 installed on your machine. You can download it from [here](https://dotnet.microsoft.com/download/dotnet/8.0).
 
 ### Steps
 
